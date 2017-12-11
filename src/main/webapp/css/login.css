@@ -1,0 +1,63 @@
+body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background: #ffffff;
+}
+
+  h1{
+  text-align: center;
+  color: #98dafc;
+}
+
+/* blue -> #98dafc
+   orange - > #daad86
+   black -> #312c32
+*/
+
+.login{
+  margin: auto;
+  padding-top: 150px;
+  padding-left: 250px;
+  padding-right: 250px;
+  text-align: center;
+}
+
+#login_btn{
+  border-width: 0px;
+  background-color: #daad86;
+  width: 300px;
+}
+
+#username{
+  margin-left: 170px;
+  width: 300px;
+  text-align: center;
+}
+
+#password{
+  margin-left: 170px;
+  width: 300px;
+  text-align: center;
+}
+
+footer{
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: #312c32;
+    color: #98dafc;
+}
+
+header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #312c32;
+  color: #98dafc;
+}

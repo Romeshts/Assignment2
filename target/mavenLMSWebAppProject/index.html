@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lms">
+<head>
+    <meta charset="UTF-8">
+    <title>RAH Library Management System</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src ="app.js"></script>
+    <script type="text/javascript" src="controller/loginController.js"></script>
+    <script type="text/javascript" src="controller/homeController.js"></script>
+    <script type="text/javascript" src="controller/transactionsController.js"></script>
+    <script type="text/javascript" src="controller/addBookController.js"></script>
+    <script type="text/javascript" src="controller/addReaderController.js"></script>
+    <script type="text/javascript" src="controller/addBranchController.js"></script>
+</head>
+<body>
+    <ng-include src="'header.html'"></ng-include>
+    <main ng-view></main>
+    <ng-include src="'footer.html'"></ng-include>
+</body>
+</html>

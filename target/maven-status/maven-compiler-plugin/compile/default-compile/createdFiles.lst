@@ -1,0 +1,9 @@
+edu\njit\dbms\group11\controller\AvailableCopiesController.class
+edu\njit\dbms\group11\service\LoginService.class
+edu\njit\dbms\group11\bean\LoginBean.class
+edu\njit\dbms\group11\controller\ReserveController.class
+edu\njit\dbms\group11\bean\AvailableCopiesBean.class
+edu\njit\dbms\group11\controller\LoginController.class
+edu\njit\dbms\group11\service\ReserveService.class
+edu\njit\dbms\group11\service\AvailableCopiesService.class
+edu\njit\dbms\group11\bean\ReserveOrBorrowBean.class

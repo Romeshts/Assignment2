@@ -1,0 +1,93 @@
+<div class="container">
+
+    <div class="form-inline">
+        <a  type="button"  class="btn btn-primary" href="#/home">Home</a>
+        <a  type="button"  class="btn btn-primary" href="#/transactions">Transactions</a>
+        <a  ng-show="admin>0" type="button"  class="btn btn-primary" href="#/addReader">Add Reader</a>
+        <a  ng-show="admin>0" type="button"  class="btn btn-primary" href="#/addBook">Add Book</a>
+        <a  ng-show="admin>0" type="button"  class="btn btn-primary" href="#/addBranch">Add Branch</a>
+    </div>
+
+        <H2>ADD Document</H2>
+
+        <form style="padding:10px;" name="addDocForm" id="addDocForm">
+          <div class="form-group">
+
+              <div class="form-inline">
+
+                  <b>Select Doc Type</b>
+                  <b style="padding-left: 293px">Select Publisher</b>
+
+              </div>
+
+              <div class="form-inline">
+
+                  <select class="form-control" style="width: 400px;" ng-model="doc.doc_type" ng-options="x for x in doc_type"></select>
+                  <select class="form-control" style="width: 400px;" ng-model="doc.publisher" ng-options="x for x in publishers"></select>
+
+              </div>
+
+              <div class="form-inline">
+
+                  <b>Enter Document Title:</b>
+                  <b style="padding-left: 255px">Select Published Date</b>
+
+              </div>
+
+              <div class="form-inline">
+
+                  <input class="form-control" style="width: 400px;" type="text" ng-model="doc.title">
+                  <input class="form-control" style="width: 400px;" type="text" ng-model="doc.pub_date">
+
+              </div>
+
+              <div class="form-inline">
+
+                  <b>Enter Copy No:</b>
+                  <b style="padding-left: 300px">Enter Doc location</b>
+
+              </div>
+
+              <div class="form-inline">
+
+                  <input class="form-control" style="width: 400px;" type="text" ng-model="doc.copy_no">
+                  <input class="form-control" style="width: 400px;" type="text" ng-model="doc.doc_loc">
+
+              </div>
+
+              <b>Select Branch</b><br>
+              <select class="form-control" style="width: 400px;" ng-model="doc.branch" ng-options="x for x in branch"></select>
+
+              <!--If doc type is book-->
+              <b ng-show="doc.doc_type=='Book'">Enter ISBN No</b>
+              <input ng-show="doc.doc_type=='Book'" class="form-control" style="width: 400px;" type="text" ng-model="doc.isbn">
+              <b ng-show="doc.doc_type=='Book'">Enter Author Name:</b>
+              <input ng-show="doc.doc_type=='Book'" class="form-control" style="width: 400px;" type="text" ng-model="doc.author">
+
+              <!--If doc type is journal volume-->
+              <b ng-show="doc.doc_type=='Journal Volume'">Enter Volume No</b>
+              <input ng-show="doc.doc_type=='Journal Volume'" class="form-control" style="width: 400px;" type="text" ng-model="doc.vol_no">
+              <b ng-show="doc.doc_type=='Journal Volume'">Enter Issue No</b>
+              <input ng-show="doc.doc_type=='Journal Volume'" class="form-control" style="width: 400px;" type="text" ng-model="doc.issue_no">
+              <b ng-show="doc.doc_type=='Journal Volume'">Select Editor</b>
+              <select ng-show="doc.doc_type=='Journal Volume'" class="form-control" style="width: 400px;" ng-model="doc.jou_editor" ng-options="x for x in editors"></select>
+
+              <!--If doc type is proceedings-->
+              <b ng-show="doc.doc_type=='Proceedings'">Enter CDate</b>
+              <input ng-show="doc.doc_type=='Proceedings'" class="form-control" style="width: 400px;" type="text" ng-model="doc.cdate">
+              <b ng-show="doc.doc_type=='Proceedings'">Enter CLocation</b>
+              <input ng-show="doc.doc_type=='Proceedings'" class="form-control" style="width: 400px;" type="text" ng-model="doc.cloc">
+              <b ng-show="doc.doc_type=='Proceedings'">Select Editor</b>
+              <select ng-show="doc.doc_type=='Proceedings'" class="form-control" style="width: 400px;" ng-model="doc.pro_editor" ng-options="x for x in editors"></select>
+
+
+              <br>
+
+              <button type="submit" class="btn btn-primary btn-md" ng-click="add_doc(doc)">Add Document</button><br><br>
+              <button class="btn btn-warning btn-md" ng-click="">Back</button>
+
+              <span style="color: green;">{{message}}</span>
+          </div>
+         </form>
+</div>
+

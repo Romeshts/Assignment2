@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="form-inline">
+        <a type="button"  class="btn btn-primary" href="#/home">Home</a>
+        <a type="button"  class="btn btn-primary" href="#/transactions">Transactions</a>
+        <a ng-show="admin>0" type="button" class="btn btn-primary" href="#/addReader">Add Reader</a>
+        <a ng-show="admin>0" type="button" class="btn btn-primary" href="#/addBook">Add Book</a>
+        <a ng-show="admin>0" type="button" class="btn btn-primary" href="#/addBranch">Add Branch</a>
+    </div>
+    <div class="home">
+        <br>
+        <input class="form-control" placeholder="Search" style="width: 500px; padding-top:4px; padding-bottom:4px;padding-left: 8px; border-radius: 4px;border: 1px solid;" type="text" ng-model="searchText">
+        <br>
+        <table class="table table-striped">
+            <tr>
+		        <th>#</th>
+		        <th>Library Branch Name</th>
+		        <th>Library Id</th>
+		        <th>Document Id</th>
+		        <th>Document Title</th>
+		        <th>Copy No</th>
+		        <th>Copy Location</th>
+		        <th ng-show="admin>0">Reader Id</th>
+		        <th>Operation</th>
+		    </tr>
+		    <tr ng-repeat="x in availableCopies | filter:searchText">
+		        <td>{{$index+1}}</td>
+		        <td>{{x.branchName}}</td>
+		        <td>{{x.branchId}}</td>
+		        <td>{{x.docId}}</td>
+		        <td>{{x.docTitle}}</td>
+		        <td>{{x.copyNo}}</td>
+		        <td>{{x.copyPosition}}</td>
+		        <td ng-show="admin>0"><input class="form-control" ng-model="x.readerId" style="text-align: center"></td>
+		        <td ng-show="admin>0"><button ng-class="{'btn btn-warning': !x.clicked, 'btn btn-success': x.clicked}" ng-click="borrowABook(x); toggle=!toggle; x.clicked = !x.clicked"><span ng-show="toggle">Done</span><span ng-hide="toggle">Borrow</span></button></td>
+		        <td ng-show="admin<1"><button ng-class="{'btn btn-warning': !x.clicked, 'btn btn-success': x.clicked}" ng-click="reserveABook(x); toggle=!toggle; x.clicked = !x.clicked"><span ng-show="toggle">Done</span><span ng-hide="toggle">Reserve</span></button></td>
+		    </tr>
+		</table>
+    </div>
+</div>
