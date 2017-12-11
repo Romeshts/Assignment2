@@ -20,6 +20,9 @@ lms.config(['$routeProvider', function ($routeProvider) {
     }).when('/addBranch', {
         templateUrl: 'add_branch.html',
         controller: 'addBranchController'
+    }).when('/admin', {
+        templateUrl: 'admin.html',
+        controller: 'adminController'
     }).otherwise({
         redirectTo: '/login'
     });

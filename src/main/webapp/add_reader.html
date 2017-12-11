@@ -1,12 +1,16 @@
 <div class="container">
 
-    <div class="form-inline">
-        <a  type="button"  class="btn btn-primary" href="#/home">Home</a>
-        <a  type="button"  class="btn btn-primary" href="#/transactions">Transactions</a>
-        <a  ng-show="admin>0" type="button"  class="btn btn-primary" href="#/addReader">Add Reader</a>
-        <a  ng-show="admin>0" type="button"  class="btn btn-primary" href="#/addBook">Add Book</a>
-        <a  ng-show="admin>0" type="button"  class="btn btn-primary" href="#/addBranch">Add Branch</a>
-    </div>
+    <a  type="button"  class="btn btn-primary" href="#/home">Home</a>
+    <a  type="button"  class="btn btn-primary" href="#/transactions">Transactions</a>
+    <span ng-show="admin>0">
+        <a type="button"  class="btn btn-primary" href="#/addReader">Add Reader</a>
+        <a type="button"  class="btn btn-primary" href="#/addBook">Add Book</a>
+        <a type="button"  class="btn btn-primary" href="#/addBranch">Add Branch</a>
+        <div style="float: right;">
+            <a type="button" class="btn btn-primary" href="#/admin">Admin</a>
+            <a type="button" class="btn btn-primary" href="#/login">Logout</a>
+        </div>
+    </span>
 
     <H2>ADD A Reader</H2>
 

@@ -1,11 +1,15 @@
 <div class="container">
-    <div class="form-inline">
-        <a type="button"  class="btn btn-primary" href="#/home">Home</a>
-        <a type="button"  class="btn btn-primary" href="#/transactions">Transactions</a>
-        <a ng-show="admin>0" type="button" class="btn btn-primary" href="#/addReader">Add Reader</a>
-        <a ng-show="admin>0" type="button" class="btn btn-primary" href="#/addBook">Add Book</a>
-        <a ng-show="admin>0" type="button" class="btn btn-primary" href="#/addBranch">Add Branch</a>
-    </div>
+    <a  type="button"  class="btn btn-primary" href="#/home">Home</a>
+    <a  type="button"  class="btn btn-primary" href="#/transactions">Transactions</a>
+    <span ng-show="admin>0">
+        <a type="button"  class="btn btn-primary" href="#/addReader">Add Reader</a>
+        <a type="button"  class="btn btn-primary" href="#/addBook">Add Book</a>
+        <a type="button"  class="btn btn-primary" href="#/addBranch">Add Branch</a>
+        <div style="float: right;">
+            <a type="button" class="btn btn-primary" href="#/admin">Admin</a>
+            <a type="button" class="btn btn-primary" href="#/login">Logout</a>
+        </div>
+    </span>
     <div class="home">
         <br>
         <input class="form-control" placeholder="Search" style="width: 500px; padding-top:4px; padding-bottom:4px;padding-left: 8px; border-radius: 4px;border: 1px solid;" type="text" ng-model="searchText">
