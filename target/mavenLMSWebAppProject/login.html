@@ -7,6 +7,7 @@
                 <input type="password" class="form-control" id="password" placeholder="Please enter your password" ng-model="loginForm.password"><br>
                 <input type="radio" id="checkAdmin" ng-model="loginForm.checkAdmin" value="1">  Are you an admin?  <br><br>
                 <input type="submit" class="btn btn-primary btn-md" id="login_btn" placeholder="Login"><br><br>
+                <input type="hidden" name="<csrf:token-name/>" value="<csrf:token-value/>" uri="index.jsp">
                 {{loginMessage}}
             </form>
         </div>

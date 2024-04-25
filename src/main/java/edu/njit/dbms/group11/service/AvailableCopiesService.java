@@ -17,7 +17,7 @@ public class AvailableCopiesService {
 	private static final String CONN_JDBC_DRIVER = "com.mysql.jdbc.Driver";
 	private static final String CONN_DB_URL = "jdbc:mysql://127.0.0.1:3306/group11_lms";
 	private static final String CONN_USERNAME = "root";
-	private static final String CONN_PASSWORD = "2017@Group11";
+	private static final String CONN_PASSWORD = "";
 
 	public AvailableCopiesService () {
 		super();
