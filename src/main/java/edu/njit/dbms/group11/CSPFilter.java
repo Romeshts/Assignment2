@@ -14,8 +14,10 @@ public class CSPFilter implements Filter {
         if (response instanceof HttpServletResponse) {
             HttpServletResponse httpResp = (HttpServletResponse) response;
             // Set CSP policies
-            httpResp.setHeader("Content-Security-Policy", "default-src 'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com; script-src-elem 'self' https://ajax.googleapis.com ; style-src-elem 'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com ;img-src 'self' https://images.trustedsource.org;");
+            httpResp.setHeader("Content-Security-Policy", "default-src 'self' ; script-src-elem 'self' ; style-src-elem 'self' ;img-src 'self' ;");
             httpResp.setHeader("Access-Control-Allow-Origin", "localhost:8080");
+            httpResp.setHeader("X-Frame-Options", "SAMEORIGIN");
+            //httpResp.setHeader("","");
         }
         chain.doFilter(request, response);
 

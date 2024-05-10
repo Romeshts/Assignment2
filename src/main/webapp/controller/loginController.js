@@ -7,6 +7,13 @@ lms.controller("loginController",['$rootScope','$scope','$http','$window', funct
     };
     $rootScope.isLoggedIn = 0;
 
+    $scope.loginWithGoogle =function() {
+    //alert("Hello")
+      // Redirect the user to Google's authentication page
+        window.location.href = '/mavenLMSWebAppProject/RAHLMS/auth/google';
+    };
+
+
     //HTTP POST method for login.
     $scope.submitLoginForm = function() {
         var method = "";
@@ -41,7 +48,7 @@ lms.controller("loginController",['$rootScope','$scope','$http','$window', funct
             }
             $rootScope.isAdmin = response.data.checkAdmin;
             $rootScope.isLoggedIn = 1;
-            $window.location.href = "#/home";
+            $window.location.href = "#!/home";
         }
     }
 
